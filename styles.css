@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.card span {
+    display: none; /* Initially hide the emoji */
+}
+
+.card.flipped span {
+    display: block; /* Show emoji when flipped */
+}
+
+.card.matched {
+    background-color: #28a745;
+    pointer-events: none;
+}
